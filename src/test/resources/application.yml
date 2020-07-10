@@ -7,12 +7,3 @@ caffeine:
         specification: expireAfterWrite=300s,maximumSize=1500
     lockCache:
       specification: expireAfterWrite=5s,maximumSize=2500
-
----
-spring:
-  cache:
-    type: caffeine
-  profiles:
-    active: config-file
-
----

@@ -1,6 +1,5 @@
 package com.github.duorourou.cache.caffeine.configuration;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.support.SimpleCacheManager;
@@ -10,8 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableCaching
-@ConditionalOnProperty(name = "spring.cache.type", havingValue = "caffeine")
-@ComponentScan(basePackages = "com.github.duorourou.cache.caffeine")
+@ComponentScan("com.github.duorourou.cache.caffeine.configuration")
 public class CustomCaffeineCacheConfiguration {
 
     private final CaffeineCacheSetting caffeineCacheSetting;
