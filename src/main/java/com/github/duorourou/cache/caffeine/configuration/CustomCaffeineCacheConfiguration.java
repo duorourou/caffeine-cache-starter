@@ -6,11 +6,13 @@ import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableCaching
 @ConditionalOnProperty(name = "spring.cache.type", havingValue = "caffeine")
+@ComponentScan(basePackages = "com.github.duorourou.cache.caffeine")
 public class CustomCaffeineCacheConfiguration {
 
     @Autowired
