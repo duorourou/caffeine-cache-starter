@@ -5,5 +5,13 @@ caffeine:
         specification: expireAfterWrite=3s,maximumSize=2000
       - name: Y
         specification: expireAfterWrite=300s,maximumSize=1500
+  cluster:
     lockCache:
       specification: expireAfterWrite=5s,maximumSize=2500
+    serviceName: ${spring.application.name}
+    instanceId:
+    pubSubChannel: XXXXXXXX-CHANNEL
+
+spring:
+  application:
+    name: "starter"

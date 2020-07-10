@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.duorourou</groupId>
     <artifactId>caffeine-cache-starter</artifactId>
-    <version>1.0.1.RELEASE</version>
+    <version>1.0.2.RELEASE</version>
     <name>caffeine-cache-starter</name>
     <description>A spring boot starter for using caffeinecache , Dev could easy to set the different cache specification
         for each cache.

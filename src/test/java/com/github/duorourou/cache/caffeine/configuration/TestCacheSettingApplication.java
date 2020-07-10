@@ -1,9 +1,10 @@
 package com.github.duorourou.cache.caffeine.configuration;
 
-import com.github.duorourou.cache.caffeine.configuration.cluster.CacheRemovalListener;
+import com.github.duorourou.cache.caffeine.configuration.cluster.RemovalMessagePublisher;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootApplication
@@ -15,8 +16,8 @@ public class TestCacheSettingApplication {
     }
 
     @Bean
-    public CacheRemovalListener cacheRemovalListener() {
-        return (k, v, c) -> {
-        };
+    @Primary
+    public RemovalMessagePublisher cacheRemovalListener() {
+        return (c, m) -> System.out.println(c + m);
     }
 }
