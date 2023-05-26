@@ -12,7 +12,7 @@
     <url>https://github.com/duorourou/caffeine-cache-starter</url>
 
     <properties>
-        <springboot.version>2.3.1.RELEASE</springboot.version>
+        <springboot.version>2.5.15</springboot.version>
         <java.version>1.8</java.version>
         <lombok.version>1.18.12</lombok.version>
         <reactor.version>3.3.7.RELEASE</reactor.version>
